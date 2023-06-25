@@ -24,9 +24,9 @@ description: "Portflio"
 # List of links in the navigation bar
 navbar-links:
   Home: ""
-  Publicações: "pages/publications"
-  Conceeitos: "pages/concepts"
-  Estudos: "pages/studies"
+  # Publicações: "pages/publications"
+  # Conceitos: "pages/concepts"
+  # Estudos: "pages/studies"
   Currículo: "pages/resume"
 
 # Image to show in the navigation bar - image must be a square (width = height)
