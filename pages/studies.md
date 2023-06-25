@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Studies
+title: Estudos
 ---
 
 ### Books that I am Currently Reading
