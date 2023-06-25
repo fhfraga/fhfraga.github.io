@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Concepts
+title: Conceitos
 ---
 
 ## Concepts
