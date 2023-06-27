@@ -1,8 +1,3 @@
----
-layout: page
-title: Currículo
----
-
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
@@ -14929,7 +14924,7 @@ Numa empresa há 5 funcionários com os seguintes salários (em R$): 2000,00; 50
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="M%C3%A9didas-de-Tend%C3%AAncia-Central">M&#233;didas de Tend&#234;ncia Central<a class="anchor-link" href="#M%C3%A9didas-de-Tend%C3%AAncia-Central">&#182;</a></h1><h2 id="M%C3%A9dia-Aritm%C3%A9tica">M&#233;dia Aritm&#233;tica<a class="anchor-link" href="#M%C3%A9dia-Aritm%C3%A9tica">&#182;</a></h2><p>Média Aritmética é a soma das observações dividida pela quantidade de observações.</p>
 $$\overline{x} = \frac{x_1 + x_2 + \cdot\cdot\cdot + x_n}{n} = \frac{1}{n}\sum_{i = 1}^{n}x_i$$<p>Essa medida de tendência central não é útil se na amostra existirem valores discrepantes (outliers)</p>
-<p>Exemplo: Temos na mesma equipe 4 funcionários, com salários de R$ 5000,00; R$ 4000,00; R$4500,00; e R$ 25000,00</p>
+<p>Exemplo: Temos na mesma equipe 4 funcionários, com salários de 5000,00 reais; 4000,00 reais; 4500,00 reais; e 25000,00 reais.</p>
 <p>A média é:
 $$\overline{x} = \frac{5000 + 4000 + 4500 + 25000}{4} = \text{R\$} 9625,00$$</p>
 <p>Esse salário médio é puxado pra cima por causa do salário discrepante de R$ 25.000,00.</p>
@@ -15446,8 +15441,7 @@ $$\overline{x}_p = \frac{(12 \cdot 2500) + (5 \cdot 5000) + (1 \cdot 8000}{12 + 
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>                                                                                
-</pre>
+<pre>                                                                                </pre>
 </div>
 </div>
 
@@ -15680,59 +15674,6 @@ $$\text{mediana(x)} = \begin{cases}
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># na mão</span>
-<span class="k">def</span> <span class="nf">mediana</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">coluna</span><span class="p">):</span>
-    <span class="n">ordem</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">coluna</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ordem</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">meio</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ordem</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="n">meio1</span> <span class="o">=</span> <span class="n">meio</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="n">mediana</span> <span class="o">=</span> <span class="p">(</span><span class="n">ordem</span><span class="p">[</span><span class="n">meio</span><span class="p">]</span> <span class="o">+</span> <span class="n">ordem</span><span class="p">[</span><span class="n">meio1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">meio</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ordem</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span>
-        <span class="n">mediana</span> <span class="o">=</span> <span class="n">ordem</span><span class="p">[</span><span class="n">meio</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">mediana</span>
-
-<span class="n">mediana</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;salario&#39;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>138000</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
@@ -15844,7 +15785,8 @@ $$\text{mediana(x)} = \begin{cases}
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;salario&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># com pandas</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;salario&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15897,7 +15839,7 @@ Name: salario, dtype: int64</pre>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Desvio-M%C3%A9dio-Absoluto">Desvio M&#233;dio Absoluto<a class="anchor-link" href="#Desvio-M%C3%A9dio-Absoluto">&#182;</a></h2><p>É a média dos desvios dos valores a contar da média, colocando os valores em módulo para evitar um possível resultado igual a zero.</p>
-$$\text{DMA(x)} = \frac{\sum_{i=1}^{n}|{x_i - \overline{x}}|}{n} $$<p><strong>Exemplo:</strong> Um aluno teve três provas ao longo do ano, tirando respectivamente 8, 4 e 9. Qual é o desvio médio absoluto de suas notas?</p>
+$$\text{DMA(x)} = \frac{\sum_{i=1}^{n}|{x_i - \overline{x}}|}{n} $$<p><strong>Exemplo:</strong> Um aluno fez três provas ao longo do ano, tirando respectivamente 8, 4 e 9. Qual é o desvio médio absoluto de suas notas?</p>
 <p>primeiro precisamos achar a média</p>
 <p>$\overline{x} = \frac{8 + 4 + 9}{3} = \frac{21}{3} = 7$</p>
 <p>$\text{DMA(x)} = \frac{|8 - 7| + |4 - 7| + |9 - 7|}{3} = \frac{6}{3} = 2 $</p>
@@ -16016,7 +15958,7 @@ $$\text{DMA(x)} = \frac{\sum_{i=1}^{n}|{x_i - \overline{x}}|}{n} $$<p><strong>Ex
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Vari%C3%A2ncia">Vari&#226;ncia<a class="anchor-link" href="#Vari%C3%A2ncia">&#182;</a></h2><p>A variância é determinada pela média dos quadrados dos desvios em relação a média aritmética. Por meio dessa medida, podemos avaliar o quanto os dados estão dispersos em relação à média aritmética. Logo, quanto maior for a variância, maior a dispersão dos dados.</p>
 <p>fórmula:</p>
-$$var(X) =  s²=\frac{\sum_{i = 1}^{n} (x_i - \overline{x})²}{n - 1}$$<p>Uma dificuldade de trabalhar com a variância é que ela nos devolve a unidade ao quadrado, sendo difícil de observar o quanto os dados estão dispersos.</p>
+$$var(X) =  s²=\frac{\sum_{i = 1}^{n} (x_i - \overline{x})²}{n - 1}$$<p>Uma dificuldade de trabalhar com a variância é que ela nos devolve a unidade ao quadrado, sendo difícil de observar quanto os dados estão dispersos.</p>
 
 </div>
 </div>
@@ -16116,7 +16058,7 @@ $$var(X) =  s²=\frac{\sum_{i = 1}^{n} (x_i - \overline{x})²}{n - 1}$$<p>Uma di
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Desvio-Padr%C3%A3o">Desvio Padr&#227;o<a class="anchor-link" href="#Desvio-Padr%C3%A3o">&#182;</a></h2><p>De forma a melhorar a compreensão da dispersão dos dados, temos o desvio padrão, que é a raiz quadrada da variância. Dessa forma o desvio padrão é capaz de apontar com maior precisão a dispersão dos valores em relação à média aritmética.,</p>
+<h2 id="Desvio-Padr%C3%A3o">Desvio Padr&#227;o<a class="anchor-link" href="#Desvio-Padr%C3%A3o">&#182;</a></h2><p>De forma a melhorar a compreensão da dispersão dos dados, temos o desvio padrão, que é a raiz quadrada da variância. Dessa forma o desvio padrão é capaz de apontar com maior precisão a dispersão dos valores em relação à média aritmética.</p>
 <p>Fórmula:</p>
 $$dp(X) = \sqrt{var(X)} = \sqrt{\sigma²}$$$$dp(X)= \sigma = \sqrt{\frac{\sum_{i = 1}^{n} (x_i - \overline{x})²}{n - 1}}$$
 </div>
@@ -16266,7 +16208,7 @@ Onde:</p>
 <p>$Q_1 = 7 + (0)(8-7)$</p>
 <p>$Q_1 = 7 + (0)(1)$</p>
 <p>$Q_1 = 7$</p>
-<p><strong>OBS.:</strong> Por mais que o segundo método tenha uma fórmula, achar pela medianas é uma forma mais simples.</p>
+<p><strong>OBS.:</strong> Por mais que o segundo método tenha uma fórmula, achar pelas medianas é uma forma mais simples.</p>
 
 </div>
 </div>
@@ -16552,7 +16494,7 @@ class="
 </ul>
 <p>Sua fórmula é dada por:
 $$\text{assimetria} = M_3 = \frac{\sum_{i=1}^{n}(x_i - \overline{x})³}{n}$$</p>
-<p>Uma desvantagem de utilizar momentos está na dependência da unidade de medida dos dados. Se tivermos trabalhando com dados em reais, a assimetria retornará reais ao cubo.</p>
+<p>Uma desvantagem de utilizar a fórmula acima está na dependência da unidade de medida dos dados. Se tivermos trabalhando com dados em reais, a assimetria retornará reais ao cubo.</p>
 <p>Para resolver isso, basta dividirmos pelo desvio padrão elevado ao cubo, trazendo o que chamamos de coeficiente momento de assimetria ($\alpha_3$)</p>
 $$\text{coeficiente momento de assimetria} = \alpha_3 = \frac{M_3}{s³}$$<ul>
 <li>Se coeficiente momento de assimetria = 0, então a curva é simétrica (curva normal)</li>
@@ -17040,7 +16982,7 @@ class="
 $$\text{curtose} = M_4 = \frac{\sum_{i=1}^{n}(x_i - \overline{x})⁴}{n}$$</p>
 <p>Dá mesma forma que dividimos no coeficiente de assimetria, dividiremos aqui para ajustar a unidade de medida.</p>
 <p>Para resolver isso, basta dividirmos pelo desvio padrão elevado à quarta, trazendo o que chamamos de coeficiente momento de curtose ($\alpha_4$)</p>
-$$\text{coeficiente momento de assimetria} = \alpha_4 = \frac{M_4}{s⁴}$$
+$$\text{coeficiente momento de curtose} = \alpha_4 = \frac{M_4}{s⁴}$$
 </div>
 </div>
 </div>
@@ -17222,15 +17164,14 @@ A curtose da platicurtica é: -1.3339285714285714
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Transforma%C3%A7%C3%B5es">Transforma&#231;&#245;es<a class="anchor-link" href="#Transforma%C3%A7%C3%B5es">&#182;</a></h1><p>Muito procedimentos estatístico são baseados em os dados estarem em um distribuição normal. Porém, em muitas situações, os dados possuem distribuições assimétricas, conter outliers, etc.</p>
+<h1 id="Transforma%C3%A7%C3%B5es">Transforma&#231;&#245;es<a class="anchor-link" href="#Transforma%C3%A7%C3%B5es">&#182;</a></h1><p>Muitos procedimentos estatísticos são baseados nos dados estarem em um distribuição normal. Porém, em muitas situações, os dados possuem distribuições assimétricas, contém outliers, etc.</p>
 <p>Uma forma de tentar transformar esses dados em um conjunto de dados com distribuição normal é a atraves de transformações.</p>
 <p>Segundo Bussab e Morettin (2010), transformações frequentemente utilizadas são:</p>
 $$ x^{(p)} = \begin{cases}
       x^p,\text{se p &gt; 0} \\
       ln(x),\text{se p = 0} \\
      -x^p,\text{se p &lt; 0} \\
-    \end{cases}$$<p>onde p são valores experimentados em uma sequência</p>
-<p>Exemplo: ...,-3, -2, -1, 0, 1, 2, 3,...</p>
+    \end{cases}$$<p>onde p são valores experimentados em uma sequência, por exemplo: ...,-3, -2, -1, 0, 1, 2, 3,...</p>
 <p>Para valores assimétricos à direita, utilize transformações com $0 &lt; p &lt; 1$, pois valores grandes de x decrescem com valores de p pequenos. Para distribuições assimétricas à esquerda, utilize $p &gt; 1$</p>
 <p>Vamos ver no Python.</p>
 
@@ -17320,10 +17261,10 @@ Name: salario, dtype: int64
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[161]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[163]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">salario_transformado</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;salario&#39;</span><span class="p">])</span><span class="c1"># ** (0.01)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">salario_transformado</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;salario&#39;</span><span class="p">])</span>
 <span class="n">salario_transformado</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;kde&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">salario_transformado</span><span class="o">.</span><span class="n">skew</span><span class="p">())</span>
@@ -17389,7 +17330,7 @@ Name: salario, dtype: float64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Agora temos uma distribuição mais próxima da normal. Porém como eu saberei o valor real depois de alguma análise? Podemos voltar a mesma distribuição usando a função que seja inversa a que usamos, no casos usamos uma função logarítmica, temos que usar uma função exponencial para reverter.</p>
+<p>Agora temos uma distribuição mais próxima da normal. Porém como eu saberei o valor real depois de alguma análise? Podemos voltar a mesma distribuição usando a função que seja inversa a que usamos, no caso usamos uma função logarítmica, temos que usar uma função exponencial para reverter.</p>
 
 </div>
 </div>
@@ -17485,6 +17426,22 @@ Name: salario, dtype: float64
 <li>Morettin, P. A., Singer, J. M. <strong>Estatística e Ciência de Dados</strong> - São Paulo: USP, 2021.</li>
 <li>Bruce, P., Bruce, A., Gedeck, P. <strong>Pratical Statistics for Data Scientists</strong>, 2 ed. O'Reilly, 2020.  </li>
 </ol>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><table>
+    <tr>
+        <td><a href="https://fhfraga.github.io/">Voltar ao site</a></td>
+        <td><a href="https://fhfraga.github.io/pages/conceitos/estatistica/">Voltar à página de estatística</a></td>
+    </tr></p>
 
 </div>
 </div>
