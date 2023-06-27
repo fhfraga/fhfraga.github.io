@@ -3,4 +3,4 @@ layout: page
 title: Conceitos
 ---
 
-## Conceitos
+* [<u>Estatística</u>](estatistica): Uma compilação de conceitos teóricos sobre estatística.
