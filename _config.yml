@@ -25,7 +25,7 @@ description: "Portfólio"
 navbar-links:
   Home: ""
   # Publicações: "pages/publications"
-  Conceitos: "pages/concepts"
+  Conceitos: "pages/conceitos"
   # Estudos: "pages/studies"
   Currículo: "pages/curriculo"
   Projetos: "pages/projetos"
