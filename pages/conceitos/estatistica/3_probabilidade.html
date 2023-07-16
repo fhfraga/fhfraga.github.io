@@ -14633,7 +14633,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Introdu%C3%A7%C3%A3o">Introdu&#231;&#227;o<a class="anchor-link" href="#Introdu%C3%A7%C3%A3o">&#182;</a></h1><p>Vimos que a análise de um conjunto de dados por meio de técnicas numéricas e gráficas permite que tenhamos uma boa idéia da distribuição desse conjunto. Em particular, vimos que a distribuição de freqüências é um excelente instrumento para avaliarmos a variabilidade dos dados de um fenômeno aleatório. Vamos criar novamente a distribuição de frequências que já vimos antes.</p>
+<h1 id="Introdu%C3%A7%C3%A3o">Introdu&#231;&#227;o<a class="anchor-link" href="#Introdu%C3%A7%C3%A3o">&#182;</a></h1><p>Vimos que a análise de um conjunto de dados por meio de técnicas numéricas e gráficas permite que tenhamos uma boa ideia da distribuição desse conjunto. Em particular, vimos que a distribuição de frequências é um excelente instrumento para avaliarmos a variabilidade dos dados de um fenômeno aleatório. Vamos criar novamente a distribuição de frequências que já vimos antes.</p>
 
 </div>
 </div>
@@ -14643,7 +14643,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tabela_frequencia</span> <span class="o">=</span> <span class="n">df_salarios</span><span class="p">[[</span><span class="s1">&#39;nivel_experiencia&#39;</span><span class="p">,</span> <span class="s1">&#39;salario&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;nivel_experiencia&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;salario&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">})</span>
@@ -14668,7 +14668,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
 
 
@@ -14745,12 +14745,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Podemos ver acima que a freqüência relativas é a estimativa da probabilidade da ocorrência de determinado evento, no nosso caso é saber qual a probabilidade de uma pessoa ter um nível de experiência. Com suposições adequadas, e sem observarmos diretamente o fenômeno aleatório de interesse, podemos criar um modelo teórico que reproduza de maneira razoável a distribuição das freqüências, quando o fenômeno é observado diretamente. Esses modelos são chamados modelos probabilísticos.</p>
+<p>Podemos ver acima que as frequências relativas são as estimativas da probabilidade da ocorrência de um determinado evento, no nosso caso é saber qual a probabilidade de uma pessoa ter um nível de experiência. Com suposições adequadas, e sem observarmos diretamente o fenômeno aleatório de interesse, podemos criar um modelo teórico que reproduza de maneira razoável a distribuição das frequências, quando o fenômeno é observado diretamente. Esses modelos são chamados modelos probabilísticos.</p>
 <p>Vamos ver um exemplo:</p>
 <p><strong>Exemplo 1</strong>: Numa lista de 10 esportistas, um deles irá ganhar o premio de esportista do ano. 3 são representantes do Brasil, 2 da Inglaterra, 4 da Alemanha e 1 da Argentina. Queremos saber a probabilidade de o ganhador ser de algum desses países. A partir das informações, podemos observar que:</p>
 <ol>
 <li>Existem 4 possibilidades (Brasil, Inglatera, Alemanha, Argentina)</li>
-<li>Vamos supor que o sorteio é honeste e que cada pessoa tenha igual chance de ser sorteada.</li>
+<li>Vamos supor que o sorteio é honesto e que cada pessoa tenha igual chance de ser sorteada.</li>
 </ol>
 <p>Logo, teremos o modelo probabilístico:</p>
 <table>
@@ -14774,7 +14774,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </tr>
 </tbody>
 </table>
-<p>Com nosso exemplo, conseguimos averiguar que todo experimento que envolva uma elemento casual necessita para que seu modelo probabilístico seja especificado</p>
+<p>Com nosso exemplo, conseguimos averiguar que todo experimento que envolva um elemento casual necessita para que seu modelo probabilístico seja especificado:</p>
 <ol>
 <li>Um espaço amostral, que é uma enumeração de todos os resultados possíveis do experimento. O espaço amostral será definido como $\Omega$</li>
 </ol>
@@ -14807,18 +14807,15 @@ $$\Omega = \{\omega_1, \omega_2, ..., \omega_n\}$$<ol>
 </tr>
 </tbody>
 </table>
-<p>Logo, sabendo que cada chance possui $\frac{1}{4}$ de probabilidade de ocorres, e chamamos de A o evento que cair apenas faces iguais nos dois lançamentos, temos:</p>
-<p>$P(A) = P\{\omega_1, \omega_4 \} = \frac{1}{4} + \frac{1}{4} = \frac{1}{2}$</p>
-<p>Se A for qualquer evento de $\Omega$, então 
+<p>Logo, sabendo que cada chance possui $\frac{1}{4}$ de probabilidade de ocorrer, e chamamos de $A$ o evento que cair apenas faces iguais nos dois lançamentos, temos:</p>
+$$P(A) = P\{\omega_1, \omega_4 \} = \frac{1}{4} + \frac{1}{4} = \frac{1}{2}$$<p>Se A for qualquer evento de $\Omega$, então :
 $$P(A) = \sum_{j}P(\omega_j)$$</p>
 <p>onde são somados todos os pontos amostrais $\omega_j \in A$</p>
-<p>Voltando a nossa tabela de frequência que nos dá o nível de experiência, nós temos que a probabilidade de ser um profissional com nível de experiência Pleno é de $21,4\%$. Sabendo que o evento A é o profissional ser Pleno, temos:</p>
-<p>$P(A) = P(Pleno) = \frac{805}{3755} = 0,214 $</p>
-<p>Onde o resultado encontrado é igual ao resultado calculado na frequência relativa.</p>
+<p>Voltando a nossa tabela de frequência que nos dá o nível de experiência, nós temos que a probabilidade de ser um profissional com nível de experiência Pleno é de $21,4\%$. Sabendo que o evento $A$ é o profissional ser Pleno, temos:</p>
+$$P(A) = P(Pleno) = \frac{805}{3755} = 0,214 $$<p>Onde o resultado encontrado é igual ao resultado calculado na frequência relativa.</p>
 <p>Uma situação que podemos ter é quando temos um evento que seja um espaço amostral contínuo. Vamos ver um exemplo</p>
-<p><strong>Exemplo 3</strong>: Para os salários da área de dados (df_salarios), qual a probabilidade de o salário ser igual ou maior 50 e menor que 100 mil doláres, Logo:</p>
-<p>$\Omega = \{\text{salário} \in \mathbb{R}: 50 \text{mil} \leq \text{salário} &lt; 100 \text{mil}\}$</p>
-
+<p><strong>Exemplo 3</strong>: Para os salários da área de dados (df_salarios), qual a probabilidade de o salário ser igual ou maior 50 mil dálares e menor que 100 mil dólares, Logo:</p>
+$$\Omega = \{\text{salário} \in \mathbb{R}: 50 \text{mil} \leq \text{salário} &lt; 100 \text{mil}\}$$
 </div>
 </div>
 </div>
@@ -14827,7 +14824,7 @@ $$P(A) = \sum_{j}P(\omega_j)$$</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_salarios_agrupados</span> <span class="o">=</span> <span class="n">df_salarios</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -14846,7 +14843,7 @@ $$P(A) = \sum_{j}P(\omega_j)$$</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tabela_frequencia_salarios</span> <span class="o">=</span> <span class="n">df_salarios_agrupados</span><span class="p">[[</span><span class="s1">&#39;salario_em_dolares_agrupados&#39;</span><span class="p">,</span> <span class="s1">&#39;salario_em_dolares&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;salario_em_dolares_agrupados&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;salario_em_dolares&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">})</span>
@@ -14869,7 +14866,7 @@ $$P(A) = \sum_{j}P(\omega_j)$$</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[36]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 
 
 
@@ -14931,8 +14928,7 @@ $$P(A) = \sum_{j}P(\omega_j)$$</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Com a tabela de frequência acima, temos:</p>
-<p>$P(A) = \frac{727}{3755} = 0,194 = 19,4\%$</p>
-<p>Então a probabilidade de alguém ter o salário entre 50 e 100 mil é de 19,4%. Lembrando que pode ser qualquer salário no intervalo $50 \text{mil} \leq \text{salário} &lt; 100 \text{mil}$</p>
+$$P(A) = \frac{727}{3755} = 0,194 = 19,4\%$$<p>Então a probabilidade de alguém ter o salário entre 50 mil e 100 mil é de 19,4%. Lembrando que pode ser qualquer salário no intervalo $50 \text{mil} \leq \text{salário} &lt; 100 \text{mil}$</p>
 
 </div>
 </div>
@@ -14947,8 +14943,8 @@ $$P(A) = \sum_{j}P(\omega_j)$$</p>
 <h1 id="Propriedades">Propriedades<a class="anchor-link" href="#Propriedades">&#182;</a></h1><p>Vimos que um modelo probabilístico é um modelo teórico para as frequências relativas. Logo, podemos obter algumas propriedades das probabilidades a partir das propriedades das frequências relativas.</p>
 <h2 id="Intervalo">Intervalo<a class="anchor-link" href="#Intervalo">&#182;</a></h2><p>Como a frequência relativa varia entre 0 e 1, as probabilidades também variarão:
 $$0 &lt; P(A) &lt; 1$$
-Para qualquer evento de A.</p>
-<h2 id="Regra-da-adi%C3%A7%C3%A3o">Regra da adi&#231;&#227;o<a class="anchor-link" href="#Regra-da-adi%C3%A7%C3%A3o">&#182;</a></h2><h3 id="Eventos-n%C3%A3o-mutuamente-exclusivos">Eventos n&#227;o mutuamente exclusivos<a class="anchor-link" href="#Eventos-n%C3%A3o-mutuamente-exclusivos">&#182;</a></h3><p>Vamos criar uma tabela de contigência para nossos dados de salário, avaliando nível de experiência e tipo de contrato</p>
+Para qualquer evento de $A$.</p>
+<h2 id="Regra-da-adi%C3%A7%C3%A3o">Regra da adi&#231;&#227;o<a class="anchor-link" href="#Regra-da-adi%C3%A7%C3%A3o">&#182;</a></h2><h3 id="Eventos-n%C3%A3o-mutuamente-exclusivos">Eventos n&#227;o mutuamente exclusivos<a class="anchor-link" href="#Eventos-n%C3%A3o-mutuamente-exclusivos">&#182;</a></h3><p>Vamos criar uma tabela de contingência para nossos dados de salário, avaliando nível de experiência e tipo de contrato.</p>
 
 </div>
 </div>
@@ -14958,7 +14954,7 @@ Para qualquer evento de A.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dcf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">df_salarios</span><span class="p">[</span><span class="s1">&#39;nivel_experiencia&#39;</span><span class="p">],</span> <span class="n">df_salarios</span><span class="p">[</span><span class="s1">&#39;tipo_de_contrato&#39;</span><span class="p">])</span>
@@ -14988,7 +14984,7 @@ Para qualquer evento de A.</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 
 
 
@@ -15077,7 +15073,7 @@ Para qualquer evento de A.</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Vamos considerar os eventos <code>Tempo integral</code> e <code>Pleno</code>. Como esse eventos, podemos considerar dois novos eventos.</p>
+<p>Vamos considerar os eventos <code>Tempo integral</code> e <code>Pleno</code>. Com esses eventos, podemos considerar dois novos eventos.</p>
 <ul>
 <li><p>Tempo integral $\cup$ pleno (tempo integral ou pleno), chamamos de união de tempo integral e pleno, é quando <strong>pelo menos um</strong> dos eventos ocorre.</p>
 </li>
@@ -15085,22 +15081,18 @@ Para qualquer evento de A.</p>
 </li>
 </ul>
 <p>Vemos que a $P(\text{Tempo integral}) = \frac{3718}{3755}$ e $P(\text{Pleno}) = \frac{805}{3755})$. Vamos calcular $P(\text{Tempo integral} \cup \text{Pleno})$</p>
-<p>$P(\text{Tempo integral} \cup \text{Pleno}) = P(\text{Tempo integral}) + P(\text{Pleno}) = \frac{3718}{3755} + \frac{805}{3755} = \frac{4523}{3755}$</p>
-<p>Temos um resultado improvável, já que temos um valor maior que as observações. Isso se deve ao fato de estarmos considerando duas vezes os profissionais que são plenos e trabalham em tempo integral. Logo o certo é:</p>
-<p>$P(\text{Tempo integral} \cup \text{Pleno}) = P(\text{Tempo integral}) + P(\text{Pleno}) - P(\text{Tempo integral} \cap \text{Pleno})= \frac{3718}{3755} + \frac{805}{3755} - \frac{792}{3755} = \frac{3731}{3755}$</p>
-<p>Nesse caso chamamos os eventos de <strong>não mutuamente exclusivos</strong>, pois podemos ter ambos ao mesmo tempo.</p>
-<p>Para evento não mutuamente excludentes temos como fórmula:
-$$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$</p>
-<h3 id="Eventos-mutuamente-exclusivos">Eventos mutuamente exclusivos<a class="anchor-link" href="#Eventos-mutuamente-exclusivos">&#182;</a></h3><p>Vamos considerar os eventos <code>Junior</code> e <code>Pleno</code>. Como esse eventos, podemos considerar dois novos eventos.</p>
+$$P(\text{Tempo integral} \cup \text{Pleno}) = P(\text{Tempo integral}) + P(\text{Pleno}) = \frac{3718}{3755} + \frac{805}{3755} = \frac{4523}{3755}$$<p>Temos um resultado improvável, já que temos um valor maior que as observações. Isso se deve ao fato de estarmos considerando duas vezes os profissionais que são plenos e trabalham em tempo integral. Logo o certo é:</p>
+$$P(\text{Tempo integral} \cup \text{Pleno}) = P(\text{Tempo integral}) + P(\text{Pleno}) - P(\text{Tempo integral} \cap \text{Pleno})= \frac{3718}{3755} + \frac{805}{3755} - \frac{792}{3755} = \frac{3731}{3755}$$<p>Nesse caso chamamos os eventos de <strong>não mutuamente exclusivos</strong>, pois podemos ter ambos ao mesmo tempo.</p>
+<p>Para evento não mutuamente exclusivos temos como fórmula:</p>
+$$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$<h3 id="Eventos-mutuamente-exclusivos">Eventos mutuamente exclusivos<a class="anchor-link" href="#Eventos-mutuamente-exclusivos">&#182;</a></h3><p>Vamos considerar os eventos <code>Júnior</code> e <code>Pleno</code>. Como esse eventos, podemos considerar dois novos eventos.</p>
 <ul>
-<li><p>Junior $\cup$ pleno (junior ou pleno), chamamos de união de junior e pleno, é quando <strong>pelo menos um</strong> dos eventos ocorre.</p>
+<li><p>Júnior $\cup$ pleno (júnior ou pleno), chamamos de união de júnior e pleno, é quando <strong>pelo menos um</strong> dos eventos ocorre.</p>
 </li>
-<li><p>Junior $\cap$ pleno (junior e pleno), chamamos de intersecção de junior e pleno, é quando <strong>ambos</strong> os eventos ocorrem simultaneamente.</p>
+<li><p>Júnior $\cap$ pleno (júnior e pleno), chamamos de intersecção de júnior e pleno, é quando <strong>ambos</strong> os eventos ocorrem simultaneamente.</p>
 </li>
 </ul>
-<p>Vemos que a $P(\text{Junior}) = \frac{302}{3755}$ e $P(\text{Pleno}) = \frac{805}{3755}$. Vamos calcular $P(\text{Junior} \cup \text{Pleno})$</p>
-<p>$P(\text{Junior} \cup \text{Pleno}) = P(\text{Junior}) + P(\text{Pleno}) = \frac{302}{3755} + \frac{805}{3755} = \frac{1107}{3755}$</p>
-<p>Temos o resultado para a união. Só que e quando o profissional for junior e pleno? Vamos ver na tabela:</p>
+<p>Vemos que a $P(\text{Júnior}) = \frac{302}{3755}$ e $P(\text{Pleno}) = \frac{805}{3755}$. Vamos calcular $P(\text{Júnior} \cup \text{Pleno})$</p>
+$$P(\text{Júnior} \cup \text{Pleno}) = P(\text{Júnior}) + P(\text{Pleno}) = \frac{302}{3755} + \frac{805}{3755} = \frac{1107}{3755}$$<p>Temos o resultado para a união. Só que e quando o profissional for junior e pleno? Vamos ver na tabela:</p>
 
 </div>
 </div>
@@ -15110,7 +15102,7 @@ $$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dcf_total</span>
@@ -15131,7 +15123,7 @@ $$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
 
 
@@ -15220,11 +15212,11 @@ $$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Vemos que não existe  profissinais que são junior e pleno ao mesmo tempo, isso se deve a um nível de experiência excluir o outro, não podendo ter dois ao mesmo tempo. Logo:</p>
+<p>Vemos que não existe profissionais que são júnior e pleno ao mesmo tempo, isso se deve a um nível de experiência excluir o outro, não podendo ter dois ao mesmo tempo. Logo:</p>
 <p>$P(\text{Junior} \cap \text{Pleno}) = 0$</p>
-<p>Portanto, voltando a equação 4, teremos:</p>
+<p>Portanto, voltando a para a equação dos eventos mutuamente exclusivos, teremos:</p>
 $$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$<p>Sabendo que não a intersecção entre os conjuntos, sendo $A \cap B = \emptyset$, então $P(A \cap B) = 0$, temos</p>
-$$P(A \cup B) = P(A) + P(B)$$<p>Nesse caso chamamos os eventos de <strong>mutuamente exclusivos</strong>, pois podemos ter apenas um.</p>
+$$P(A \cup B) = P(A) + P(B)$$<p>Nesse caso chamamos os eventos de <strong>mutuamente exclusivos</strong>, pois podemos ter apenas um deles por vez.</p>
 
 </div>
 </div>
@@ -15236,7 +15228,7 @@ $$P(A \cup B) = P(A) + P(B)$$<p>Nesse caso chamamos os eventos de <strong>mutuam
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Regra-da-multiplica%C3%A7%C3%A3o">Regra da multiplica&#231;&#227;o<a class="anchor-link" href="#Regra-da-multiplica%C3%A7%C3%A3o">&#182;</a></h2><p>Vamos criar uma tabela de contigência de ações e vamos usar a criada na regra de adição.</p>
+<h2 id="Regra-da-multiplica%C3%A7%C3%A3o">Regra da multiplica&#231;&#227;o<a class="anchor-link" href="#Regra-da-multiplica%C3%A7%C3%A3o">&#182;</a></h2><p>Vamos criar uma tabela de contingência de ações e vamos usar a tabela criada na regra da adição.</p>
 
 </div>
 </div>
@@ -15246,11 +15238,10 @@ $$P(A \cup B) = P(A) + P(B)$$<p>Nesse caso chamamos os eventos de <strong>mutuam
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">google</span> <span class="o">=</span> <span class="n">df_b3</span><span class="p">[</span><span class="n">df_b3</span><span class="p">[</span><span class="s1">&#39;ticker&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;GOGL34&#39;</span><span class="p">]</span>
-<span class="c1">#google = google[google[&#39;datetime&#39;].dt.year &lt; 2020]</span>
 <span class="n">bins</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">10000</span><span class="p">]</span>
 <span class="n">legendas</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;De 0 à 100&#39;</span><span class="p">,</span> <span class="s1">&#39;De 100 à 200&#39;</span><span class="p">,</span> <span class="s1">&#39;Acima de 200&#39;</span><span class="p">]</span>
 <span class="n">google</span><span class="p">[</span><span class="s1">&#39;open_agrupados&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">google</span><span class="p">[</span><span class="s1">&#39;open&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">legendas</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -15266,27 +15257,11 @@ $$P(A \cup B) = P(A) + P(B)$$<p>Nesse caso chamamos os eventos de <strong>mutuam
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tabela_frequencia_google</span> <span class="o">=</span> <span class="n">google</span><span class="p">[[</span><span class="s1">&#39;open_agrupados&#39;</span><span class="p">,</span> <span class="s1">&#39;open&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;open_agrupados&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;open&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">})</span>
 <span class="n">tabela_frequencia_google</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;frequencia_observada&#39;</span><span class="p">]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
      </div>
@@ -15302,8 +15277,8 @@ $$P(A \cup B) = P(A) + P(B)$$<p>Nesse caso chamamos os eventos de <strong>mutuam
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Eventos-independentes">Eventos independentes<a class="anchor-link" href="#Eventos-independentes">&#182;</a></h3><p>Vamos ver com um exemplo para facilitar o entendimento</p>
-<p><strong>Exemplo 4</strong>: Qual a probabilidade de uma ação do google ser está com seu valor acima de 200 reais e um salário da área de dados está contido entre 50000 e 100000 mil dólares/ano?</p>
-<p>Temos o evento A, que é o valor da ação do google está acima de 200 reais. E temos o evento B que é o valor do salário de um funcionário da área de dados está contido entre 50000 e 100000 mil dólares/ano.</p>
+<p><strong>Exemplo 4</strong>: Qual a probabilidade de uma ação do Google ter seu valor acima de 200 reais e um salário da área de dados está contido entre 50 mil e 100 mil dólares/ano?</p>
+<p>Temos o evento $A$, que é o valor da ação do Google está acima de 200 reais. E temos o evento B que é o valor do salário de um funcionário da área de dados está contido entre 50 mil e 100 mil dólares/ano.</p>
 <p>Para responder esse exemplo vamos ver as duas tabelas criadas.</p>
 
 </div>
@@ -15314,7 +15289,7 @@ $$P(A \cup B) = P(A) + P(B)$$<p>Nesse caso chamamos os eventos de <strong>mutuam
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tabela_frequencia_google</span>
@@ -15335,7 +15310,7 @@ $$P(A \cup B) = P(A) + P(B)$$<p>Nesse caso chamamos os eventos de <strong>mutuam
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[35]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 
 
 
@@ -15394,7 +15369,7 @@ $$P(A \cup B) = P(A) + P(B)$$<p>Nesse caso chamamos os eventos de <strong>mutuam
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tabela_frequencia_salarios</span>
@@ -15415,7 +15390,7 @@ $$P(A \cup B) = P(A) + P(B)$$<p>Nesse caso chamamos os eventos de <strong>mutuam
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[37]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 
 
 
@@ -15477,13 +15452,10 @@ $$P(A \cup B) = P(A) + P(B)$$<p>Nesse caso chamamos os eventos de <strong>mutuam
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Logo temos que:</p>
-<p>$P(A) = \frac{275}{1112} = 0,247$</p>
-<p>e</p>
-<p>$P(B) = \frac{727}{3755} = 0,194$</p>
-<p>Como esses eventos não dependem de si, para achar a probabilidade de uma ação do google ser está com seu valor acima de 200 reais e um salário da área de dados está contido entre 50000 e 100000 mil dólares/ano, temos que multiplicar as probabilidades achadas.</p>
-<p>$P(A)P(B)= 0,274 \cdot 0,194 = 0,053$</p>
-<p>Formalizando:</p>
-<p>Quando temos dois eventos independentes, então a probabilidade da ocorrência de ambos os eventos será igual ao produto das probabilidade individuais</p>
+$$P(A) = \frac{275}{1112} = 0,247$$<p>e</p>
+$$P(B) = \frac{727}{3755} = 0,194$$<p>Como esses eventos não dependem de si, para achar a probabilidade de uma ação do Google está com seu valor acima de 200 reais e um salário da área de dados está contido entre 50 mil e 100 mil dólares/ano, temos que multiplicar as probabilidades achadas.</p>
+$$P(A)P(B)= 0,274 \cdot 0,194 = 0,053$$<p>Formalizando:</p>
+<p>Quando temos dois eventos independentes, então a probabilidade da ocorrência de ambos os eventos será igual ao produto das probabilidade individuais.</p>
 $$P(\text{A e B}) = P(A)\cdot P(B)$$
 </div>
 </div>
@@ -15496,7 +15468,7 @@ $$P(\text{A e B}) = P(A)\cdot P(B)$$
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Eventos-dependentes">Eventos dependentes<a class="anchor-link" href="#Eventos-dependentes">&#182;</a></h3><p>Vamos ver com um exemplo para facilitar o entendimento</p>
-<p><strong>Exemplo 5</strong>: Uma empresa teve acesso a pesquisa de salários de dados e quer contratar dois profissionais na faixa salarial entre 50000 e 100000 mil dólares/ano e que sejam de nível pleno. Qual a probabilidade de aleatoriamente eles escolherem dois profissionais com essas características?</p>
+<p><strong>Exemplo 5</strong>: Uma empresa teve acesso a pesquisa de salários da área de dados e quer contratar dois profissionais na faixa salarial entre 50 mil e 100 mil dólares/ano e que sejam de nível pleno. Qual a probabilidade de aleatoriamente eles escolherem dois profissionais com essas características?</p>
 <p>Para responder esse exemplo vamos criar uma tabela de frequência.</p>
 
 </div>
@@ -15507,7 +15479,7 @@ $$P(\text{A e B}) = P(A)\cdot P(B)$$
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tabela_frequencia_salarios_nivel</span> <span class="o">=</span> <span class="n">df_salarios_agrupados</span><span class="p">[[</span><span class="s1">&#39;salario_em_dolares_agrupados&#39;</span><span class="p">,</span> <span class="s1">&#39;salario_em_dolares&#39;</span><span class="p">,</span> <span class="s1">&#39;nivel_experiencia&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;salario_em_dolares_agrupados&#39;</span><span class="p">,</span> <span class="s1">&#39;nivel_experiencia&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;salario_em_dolares&#39;</span><span class="p">:</span> <span class="s1">&#39;count&#39;</span><span class="p">})</span>
@@ -15530,7 +15502,7 @@ $$P(\text{A e B}) = P(A)\cdot P(B)$$
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
 
 
@@ -15632,16 +15604,13 @@ $$P(\text{A e B}) = P(A)\cdot P(B)$$
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Temos que 290 profissionais ganham o salário entre 50 e 100 mil dólares/ano e são de nível pleno. Logo pro primeiro profissional:</p>
-<p>$P(A) = \frac{290}{3755} = 0,077$</p>
-<p>Contudo, para o segundo a probabilidade muda, já que agora temos um funcionário a menos.</p>
-<p>$P(B|A) = \frac{289}{3754} = 0,076$</p>
-<p>Isso demonstra que a segundo probabilidade depende da primeira.</p>
+<p>Temos que 290 profissionais ganham o salário entre 50 mil e 100 mil dólares/ano e são de nível pleno. Logo pro primeiro profissional:</p>
+$$P(A) = \frac{290}{3755} = 0,077$$<p>Contudo, para o segundo a probabilidade muda, já que agora temos um funcionário a menos.</p>
+$$P(B|A) = \frac{289}{3754} = 0,076$$<p>Isso demonstra que a probabilidade do segundo depende da probabilidade do primeiro.</p>
 <p>Formalizando:</p>
-$$P(\text{A e B}) = P(A) \cdot P(B|A)$$<p>Onde $P(B|A)$ le-se como "a probabilidade de B sabendo que A já ocorreu"</p>
-<p>Logo no nosso exemplo acima teriamos</p>
-<p>$P(\text{A e B}) = \frac{290}{3755} \cdot \frac{289}{3754} = 0,006$</p>
-<p>Com isso vemos que a probabilidade é de 0,6% para conseguir aleatoriamente profissionais com as características desejadas.</p>
+$$P(\text{A e B}) = P(A) \cdot P(B|A)$$<p>Onde $P(B|A)$ lê-se como "a probabilidade de B sabendo que A já ocorreu" ou "a probabilidade de B dado A"</p>
+<p>Logo no nosso exemplo acima teríamos</p>
+$$P(\text{A e B}) = \frac{290}{3755} \cdot \frac{289}{3754} = 0,006$$<p>Com isso vemos que a probabilidade é de 0,6% para conseguir aleatoriamente dois profissionais com as características desejadas.</p>
 
 </div>
 </div>
@@ -15655,15 +15624,14 @@ $$P(\text{A e B}) = P(A) \cdot P(B|A)$$<p>Onde $P(B|A)$ le-se como "a probabilid
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Combina%C3%A7%C3%A3o">Combina&#231;&#227;o<a class="anchor-link" href="#Combina%C3%A7%C3%A3o">&#182;</a></h2><p>As combinações são subconjuntos onde a ordem dos elementos não é importante, entretanto, são caracterizadas pela natureza dos mesmos.</p>
 <p>Sua fórmula é dada por</p>
-<p>$C_{k, x} = {n \choose k} = \frac{n!}{x!(n-x)!}$</p>
-<p>onde</p>
+$$C_{k, x} = {n \choose k} = \frac{n!}{x!(n-x)!}$$<p>onde</p>
 <ul>
-<li>n: Número total de elementos</li>
-<li>k: Número de elementos escolhidos</li>
+<li>n: Número total de elementos; e</li>
+<li>k: Número de elementos escolhidos.</li>
 </ul>
 <p>Vamos a um exemplo:</p>
 <p><strong>Exemplo 6</strong>:</p>
-<p>Uma investidor que comprar 5 ações do google, sendo 2 ações com o preço entre 0 e 100 reais e 3 com o preço acima de 200 reais. Qual a probabilidade do investidor comprar essas ações, de modo que a ordem seja irrelavante?</p>
+<p>Uma investidor quer comprar 5 ações do Google, sendo 2 ações com o preço entre 0 e 100 reais e 3 com o preço acima de 200 reais. Qual a probabilidade do investidor comprar essas ações, de modo que a ordem seja irrelevante?</p>
 
 </div>
 </div>
@@ -15673,7 +15641,7 @@ $$P(\text{A e B}) = P(A) \cdot P(B|A)$$<p>Onde $P(B|A)$ le-se como "a probabilid
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tabela_frequencia_google</span>
@@ -15694,7 +15662,7 @@ $$P(\text{A e B}) = P(A) \cdot P(B|A)$$<p>Onde $P(B|A)$ le-se como "a probabilid
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[43]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
@@ -15757,14 +15725,10 @@ $$P(\text{A e B}) = P(A) \cdot P(B|A)$$<p>Onde $P(B|A)$ le-se como "a probabilid
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Temos 77 opções de escolha para ações de 0 à 100 reais e 275 para ações acima de 200 reais.</p>
 <p>A combinação de 0 à 100 reais é:</p>
-<p>$C_{77, 2} = {77 \choose 2} =  \frac{77!}{2!(77-2)!} = 2926$</p>
-<p>A combinação para ações acima de 200 reais é:</p>
-<p>$C_{275, 3} = {275 \choose 3} =  \frac{275!}{3!(275-3)!} = 3428425$</p>
-<p>E a combinação total é:</p>
-<p>$C_{1112, 5} = {1112 \choose 5} =  \frac{1112!}{5!(1112-5)!} = 14042094310000$</p>
-<p>Com isso conseguimos calcular a probabilidade, que é:</p>
-<p>$P(A) =  \frac{2926 \cdot 3428425}{14042094310000} = 0,000714 = 0,07\%$</p>
-<p>Temos que a probabilidade de o investidor conseguir aleatoriamente uma combinação de 5 ações, 2 abaixo de 100 reais e 3 acima de duzentos é de 0,07%</p>
+$$C_{77, 2} = {77 \choose 2} =  \frac{77!}{2!(77-2)!} = 2926$$<p>A combinação para ações acima de 200 reais é:</p>
+$$C_{275, 3} = {275 \choose 3} =  \frac{275!}{3!(275-3)!} = 3428425$$<p>E a combinação total é:</p>
+$$C_{1112, 5} = {1112 \choose 5} =  \frac{1112!}{5!(1112-5)!} = 14042094310000$$<p>Com isso conseguimos calcular a probabilidade, que é:</p>
+$$P(A) =  \frac{2926 \cdot 3428425}{14042094310000} = 0,000714 = 0,07\%$$<p>Temos que a probabilidade de o investidor conseguir aleatoriamente uma combinação de 5 ações, 2 abaixo de 100 reais e 3 acima de duzentos é de 0,07%.</p>
 
 </div>
 </div>
@@ -15776,7 +15740,7 @@ $$P(\text{A e B}) = P(A) \cdot P(B|A)$$<p>Onde $P(B|A)$ le-se como "a probabilid
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Probabilidade-condicional-e-independ%C3%AAncia">Probabilidade condicional e independ&#234;ncia<a class="anchor-link" href="#Probabilidade-condicional-e-independ%C3%AAncia">&#182;</a></h1><h2 id="Condicional">Condicional<a class="anchor-link" href="#Condicional">&#182;</a></h2><p>Vamos voltar a analisar nosso exemplo da tabela de contigência do nível de experiência e tipo de contrato</p>
+<h1 id="Probabilidade-condicional-e-independ%C3%AAncia">Probabilidade condicional e independ&#234;ncia<a class="anchor-link" href="#Probabilidade-condicional-e-independ%C3%AAncia">&#182;</a></h1><h2 id="Condicional">Condicional<a class="anchor-link" href="#Condicional">&#182;</a></h2><p>Vamos voltar a analisar nosso exemplo da tabela de contingência do <code>nível de experiência</code> e <code>tipo de contrato</code>.</p>
 
 </div>
 </div>
@@ -15786,7 +15750,7 @@ $$P(\text{A e B}) = P(A) \cdot P(B|A)$$<p>Onde $P(B|A)$ le-se como "a probabilid
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dcf_total</span>
@@ -15807,7 +15771,7 @@ $$P(\text{A e B}) = P(A) \cdot P(B|A)$$<p>Onde $P(B|A)$ le-se como "a probabilid
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 
 
 
@@ -15897,17 +15861,13 @@ $$P(\text{A e B}) = P(A) \cdot P(B|A)$$<p>Onde $P(B|A)$ le-se como "a probabilid
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>Exemplo 7</strong>:</p>
-<p>Vamos pegar um profissional, escolhido aleatoriamente, que trabalhe em tempo integral, a probabilidade que ele seja senior é de $\frac{2511}{3718}$, pois dos 3718 profissionais que trabalham em tempo integral, 2511 são de nível senior. Escrevemos então</p>
-<p>$P(\text{senior|tempo integral}) = \frac{2511}{3718}$</p>
-<p>Formalizando:</p>
-<p>Para dois eventos quaisquer A e B, sendo $P(B) &gt; 0$, definimos a probabilidade condicional de A dado B, $P(A|B)$, como sendo</p>
-$$P(A|B) = \frac{P(A\cap B)}{P(B)}$$<p>No nosso exemplo acima, sendo B profissionais que trabalham em tempo integral e A profissionais de nível Senior, temos:</p>
-<p>$P(A|B) = \frac{\frac{2511}{3755}}{\frac{3718}{3755}} = \frac{2511}{3755} \cdot \frac{3755}{3718} = \frac{2511}{3718} = 0,675$</p>
-<p>Da equação 9, podemos obter a <strong>regra do produto de probabilidades</strong></p>
-$$P(A \cap B) = P(B) \cdot P(A|B)$$<p>Se em nosso exemplo, depois de escolher um profissional de nível senior, fossemos escolher um de nível pleno ficaria:</p>
-<p>$P(\text{tempo integral} \cap \text{senior} \cap \text{pleno}) = P(\text{tempo integral}) \cdot P(\text{senior|tempo integral}) \cdot P(\text{pleno|tempo integral} \cap \text{senior})$</p>
-<p>$P(\text{tempo integral} \cap \text{senior} \cap \text{pleno}) = \frac{3718}{3755} \cdot \frac{2511}{3718} \cdot \frac{792}{3717} = 0,990 \cdot 0,675 \cdot 0,213 = 0,142$</p>
-<p>Então, a fórmula para três eventos é:
+<p>Vamos pegar um profissional, escolhido aleatoriamente, que trabalhe em tempo integral, a probabilidade que ele seja sênior é de $\frac{2511}{3718}$, pois dos 3718 profissionais que trabalham em tempo integral, 2511 são de nível sênior. Escrevemos então:</p>
+$$P(\text{sênior|tempo integral}) = \frac{2511}{3718}$$<p>Formalizando:</p>
+<p>Para dois eventos quaisquer $A$ e $B$, sendo $P(B) &gt; 0$, definimos a probabilidade condicional de $A$ dado $B$, $P(A|B)$, como sendo:</p>
+$$P(A|B) = \frac{P(A\cap B)}{P(B)}$$<p>No nosso exemplo acima, sendo $B$ profissionais que trabalham em tempo integral e $A$ profissionais de nível sênior, temos:</p>
+$$P(A|B) = \frac{\frac{2511}{3755}}{\frac{3718}{3755}} = \frac{2511}{3755} \cdot \frac{3755}{3718} = \frac{2511}{3718} = 0,675$$<p>Da equação 9, podemos obter a <strong>regra do produto de probabilidades</strong></p>
+$$P(A \cap B) = P(B) \cdot P(A|B)$$<p>Se em nosso exemplo, depois de escolher um profissional de nível sênior, fossemos escolher um de nível pleno, teríamos:</p>
+$$P(\text{tempo integral} \cap \text{sênior} \cap \text{pleno}) = P(\text{tempo integral}) \cdot P(\text{sênior|tempo integral}) \cdot P(\text{pleno|tempo integral} \cap \text{sênior})$$$$P(\text{tempo integral} \cap \text{sênior} \cap \text{pleno}) = \frac{3718}{3755} \cdot \frac{2511}{3718} \cdot \frac{792}{3717} = 0,990 \cdot 0,675 \cdot 0,213 = 0,142$$<p>Então, a fórmula para três eventos é:
 $$P(A \cap B \cap C) = P(A) \cdot P(B|A) \cdot P(C|A \cap B)$$</p>
 <p>Essa relação pode ser estendida para um número finito de eventos.</p>
 
@@ -15921,7 +15881,7 @@ $$P(A \cap B \cap C) = P(A) \cdot P(B|A) \cdot P(C|A \cap B)$$</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Independente">Independente<a class="anchor-link" href="#Independente">&#182;</a></h2><p>Vamos novamente usar a tabela de contigência anterior</p>
+<h2 id="Independente">Independente<a class="anchor-link" href="#Independente">&#182;</a></h2><p>Vamos novamente usar a tabela de contingência anterior.</p>
 
 </div>
 </div>
@@ -15931,7 +15891,7 @@ $$P(A \cap B \cap C) = P(A) \cdot P(B|A) \cdot P(C|A \cap B)$$</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dcf_total</span>
@@ -15952,7 +15912,7 @@ $$P(A \cap B \cap C) = P(A) \cdot P(B|A) \cdot P(C|A \cap B)$$</p>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[45]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
 
 
 
@@ -16041,20 +16001,13 @@ $$P(A \cap B \cap C) = P(A) \cdot P(B|A) \cdot P(C|A \cap B)$$</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>Exempo 8</strong>:</p>
-<p>Vamos agora imaginar que todos esse profissionais são de uma mesma empresa e ela está fazendo uma premiação, onde ela entregará dois prêmios. O candidato que ganhar o primeiro premio, também pode concorrer ao segundo. A probabilidade que esse(s) profissional(is) seja(m) senior(es) é:</p>
-<p>$P(B) = P(\text{Senior}_1 ) = \frac{2516}{3755}$, e</p>
-<p>$P(A|B)= P(\text{Senior}_2|\text{Senior}_1) = \frac{2516}{3755} = P(A)$</p>
-<p>A probabilidade $P(A|B)$ é igual a $P(A)$ devido ao fato de "repormos" o candidato após a primeira premiação, fazendo com que o evento $A$ não seja condicionado ao evento $B$. Esse tipo de probabilidade chamamos de independente, pois o probabilidade posterior independe da probabilidade anterior.</p>
-<p>Sua fórmula é dado por:</p>
-$$P(A\cap B) = P(A) \cdot P(B)$$<p>Em nosso exemplo o resultado seria</p>
-<p>$P(A\cap B) = P(A) \cdot P(B) = \frac{2516}{3755} \cdot \frac{2516}{3755} = \frac{6330256}{14100025} = 0,45$</p>
-<p>Se em nosso exemplo, depois do segundo premio, houvesse um terceiro para um profissional nível pleno, ficaria:</p>
-<p>$P(A) = P(\text{Senior}_1 ) = \frac{2516}{3755}$,</p>
-<p>$P(B) = P(\text{Senior}_2|\text{Senior}_1) = \frac{2516}{3755} = P(A)$, e</p>
-<p>$P(C) = P(\text{Pleno}|\text{Senior}_1  \cap \text{Senior}_2 ) = \frac{805}{3755}$</p>
-<p>$P(A\cap B \cap C) = P(A) \cdot P(B) \cdot P(C) = \frac{2516}{3755} \cdot \frac{2516}{3755} \cdot \frac{805}{3755}= 0,096$</p>
-<p>Essa relação pode ser estendida para um número finito de eventos.</p>
+<p><strong>Exemplo 8</strong>:</p>
+<p>Vamos agora imaginar que todos esses profissionais são de uma mesma empresa e ela está fazendo uma premiação, onde ela entregará dois prêmios. O candidato que ganhar o primeiro prêmio, também pode concorrer ao segundo. A probabilidade que esse(s) profissional(is) seja(m) sênior(es) é:</p>
+$$P(B) = P(\text{Sênior}_1 ) = \frac{2516}{3755}$$$$P(A|B)= P(\text{Sênior}_2|\text{Senior}_1) = \frac{2516}{3755} = P(A)$$<p>A probabilidade $P(A|B)$ é igual a $P(A)$ devido ao fato de "repormos" o candidato após a primeira premiação, fazendo com que o evento $A$ não seja condicionado ao evento $B$. Esse tipo de probabilidade chamamos de <strong>independente</strong>, pois a probabilidade posterior independe da probabilidade anterior.</p>
+<p>Sua fórmula é dada por:</p>
+$$P(A\cap B) = P(A) \cdot P(B)$$<p>Em nosso exemplo o resultado seria:</p>
+$$P(A\cap B) = P(A) \cdot P(B) = \frac{2516}{3755} \cdot \frac{2516}{3755} = \frac{6330256}{14100025} = 0,45$$<p>Se em nosso exemplo, depois do segundo prêmio, houvesse um terceiro para um profissional nível pleno, ficaria:</p>
+$$P(A) = P(\text{Senior}_1 ) = \frac{2516}{3755}$$$$P(B) = P(\text{Senior}_2|\text{Senior}_1) = \frac{2516}{3755} = P(A)$$$$P(C) = P(\text{Pleno}|\text{Senior}_1  \cap \text{Senior}_2 ) = \frac{805}{3755}$$$$P(A\cap B \cap C) = P(A) \cdot P(B) \cdot P(C) = \frac{2516}{3755} \cdot \frac{2516}{3755} \cdot \frac{805}{3755}= 0,096$$<p>Essa relação pode ser estendida para um número finito de eventos.</p>
 
 </div>
 </div>
@@ -16068,8 +16021,8 @@ $$P(A\cap B) = P(A) \cdot P(B)$$<p>Em nosso exemplo o resultado seria</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Teorema-de-Bayes">Teorema de Bayes<a class="anchor-link" href="#Teorema-de-Bayes">&#182;</a></h1><p>O Teorema de Bayes é uma das relações mais importantes de probabilidades condicionais.</p>
 <p>A versão mais simples desse teorema pode ser escrita como:</p>
-$$P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A) \cdot P(B|A)}{P(B)}$$<p>Vamos entender com um exemplo</p>
-<p>Vamos ver nossa tabela de contigência usada anteriormente</p>
+$$P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A) \cdot P(B|A)}{P(B)}$$<p>Vamos entender com um exemplo.</p>
+<p>Vamos ver nossa tabela de contingência usada anteriormente.</p>
 
 </div>
 </div>
@@ -16079,7 +16032,7 @@ $$P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A) \cdot P(B|A)}{P(B)}$$<p>Vamos e
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dcf_total</span>
@@ -16100,7 +16053,7 @@ $$P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A) \cdot P(B|A)}{P(B)}$$<p>Vamos e
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 
 
 
@@ -16190,27 +16143,17 @@ $$P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A) \cdot P(B|A)}{P(B)}$$<p>Vamos e
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>Exemplo 9</strong>:</p>
-<p>Temos quatro tipos de formas de contratos, cada um com quatro possibilidade de níveis. Qual a probabilidade de um contrato ser de tempo parcial sabendo que o nível de experiência escolhido foi junior?</p>
+<p>Temos quatro tipos de formas de contratos, cada um com quatro possibilidade de níveis. Qual a probabilidade de um contrato ser de tempo parcial sabendo que o nível de experiência escolhido foi júnior?</p>
 <p>Bom, sabemos que:</p>
-<p>$P(\text{Contrato}) = \frac{1}{4}, P(\text{Junior|Contrato}) = \frac{2}{10}$</p>
-<p>$P(\text{Freelance}) = \frac{1}{4}, P(\text{Junior|Freelance}) = \frac{2}{10}$</p>
-<p>$P(\text{Tempo integral}) = \frac{1}{4}, P(\text{Junior|Tempo integral}) = \frac{302}{3718}$</p>
-<p>$P(\text{Tempo parcial}) = \frac{1}{4}, P(\text{Junior|Tempo parcial}) = \frac{14}{17}$</p>
-<p>Usando o teorema de Bayes, temos:</p>
-<p>$P(\text{Tempo Parcial|Junior}) = \frac{P(\text{Tempo Parcial}) \cdot P(\text{Junior|Tempo Parcial})}{P(\text{Junior})}$</p>
-<p>Precisamos achar o valor de ${P(\text{Junior})}$. Como os tipos de contratos são mutuamente exclusivos, e reunidos formam o espaço amostral completo, podemos decompor os profissionais juniores na reunião de quatro outros, também mutuamente exclusivos:</p>
-<p>${P(\text{Junior})} = P(\text{Contrato} \cap \text{Junior}) \cup P(\text{Freelance} \cap \text{Junior}) \cup P(\text{Tempo integral} \cap \text{Junior}) \cup P(\text{Tempo parcial} \cap \text{Junior})$</p>
-<p>Lembrando a regra do produto das probabilidades, temos</p>
+$$P(\text{Contrato}) = \frac{1}{4}, P(\text{Júnior|Contrato}) = \frac{2}{10}$$$$P(\text{Freelance}) = \frac{1}{4}, P(\text{Júnior|Freelance}) = \frac{2}{10}$$$$P(\text{Tempo integral}) = \frac{1}{4}, P(\text{Júnior|Tempo integral}) = \frac{302}{3718}$$$$P(\text{Tempo parcial}) = \frac{1}{4}, P(\text{Júnior|Tempo parcial}) = \frac{14}{17}$$<p>Usando o teorema de Bayes, temos:</p>
+$$P(\text{Tempo Parcial|Júnior}) = \frac{P(\text{Tempo Parcial}) \cdot P(\text{Júnior|Tempo Parcial})}{P(\text{Júnior})}$$<p>Precisamos achar o valor de ${P(\text{Júnior})}$. Como os tipos de contratos são mutuamente exclusivos, e reunidos formam o espaço amostral completo, podemos decompor os profissionais juniores na reunião de quatro outros, também mutuamente exclusivos:</p>
+$${P(\text{Júnior})} = P(\text{Contrato} \cap \text{Júnior}) \cup P(\text{Freelance} \cap \text{Júnior}) \cup P(\text{Tempo integral} \cap \text{Júnior}) \cup P(\text{Tempo parcial} \cap \text{Júnior})$$<p>Lembrando a regra do produto das probabilidades, temos:</p>
 $$P(A \cap B) = P(B) \cdot P(A|B)$$<p>Substituindo ela no nosso problema</p>
-<p>${P(\text{Junior})} = P(\text{Contrato}) \cdot P(\text{Junior|Contrato}) + P(\text{Freelance}) \cdot P(\text{Junior|Freelance}) + P(\text{Tempo integral}) \cdot P(\text{Junior|Tempo integral}) + P(\text{Tempo parcial}) \cdot P(\text{Junior|Tempo parcial})$</p>
-<p>Como temos todas as probabilidade já calculadas, só substituir:</p>
-<p>${P(\text{Junior})} = \frac{1}{4} \cdot \frac{2}{10} + \frac{1}{4} \cdot \frac{2}{10} + \frac{1}{4} \cdot \frac{302}{3718} + \frac{1}{4} \cdot \frac{14}{17}$</p>
-<p>${P(\text{Junior})} = 0,33$</p>
-<p>substituindo no teorema de Bayes.</p>
-<p>$P(\text{Tempo Parcial|Junior}) = \frac{0,25 \cdot 0,82}{0,33} = 0,62$</p>
-<p>Logo, temos 62% de probabilidade de o contrato ser tempo parcial, sendo o nível do profissional junior.</p>
+$${P(\text{Junior})} = P(\text{Contrato}) \cdot P(\text{Junior|Contrato}) + P(\text{Freelance}) \cdot P(\text{Junior|Freelance}) + P(\text{Tempo integral}) \cdot P(\text{Junior|Tempo integral}) + P(\text{Tempo parcial}) \cdot P(\text{Junior|Tempo parcial})$$<p>Como temos todas as probabilidade já calculadas, só substituir:</p>
+$${P(\text{Junior})} = \frac{1}{4} \cdot \frac{2}{10} + \frac{1}{4} \cdot \frac{2}{10} + \frac{1}{4} \cdot \frac{302}{3718} + \frac{1}{4} \cdot \frac{14}{17}$$$${P(\text{Junior})} = 0,33$$<p>substituindo no teorema de Bayes.</p>
+$$P(\text{Tempo Parcial|Júnior}) = \frac{0,25 \cdot 0,82}{0,33} = 0,62$$<p>Logo, temos 62% de probabilidade de o contrato ser tempo parcial, sendo o nível do profissional júnior.</p>
 <p>Formalizando o que vimos:</p>
-<p>Seja $\{C_1, C_2, ..., C_n\}$ uma partição do espaço amostral $\Omega$, então</p>
+<p>Seja $\{C_1, C_2, ..., C_n\}$ uma partição do espaço amostral $\Omega$, então:</p>
 <p>$C_i \cap C_j = \emptyset$, para todo $ i \neq j$, então $C_1 \cup C_2 \cup ... \cup C_n = \Omega$</p>
 <p>A probabilidade de ocorrência do evento $C_i$, supondo-se a ocorrência do evento $A$ é:</p>
 $$P(C_i|A) = \frac{P(C_i)\cdot P(A|C_i)}{\sum_{j=1}^{n}P(C_j)\cdot P(A|C_j)}$$<p>onde:</p>
@@ -16218,28 +16161,26 @@ $$P(C_i|A) = \frac{P(C_i)\cdot P(A|C_i)}{\sum_{j=1}^{n}P(C_j)\cdot P(A|C_j)}$$<p
 <li>$C_i, ..., C_n$ é um conjunto de hipóteses, sendo somente uma verdadeira.</li>
 </ul>
 <p>Essa é a forma generalizada do teorema de Bayes.</p>
-<p>Vamos a mais um exemplo para assimilarmos</p>
+<p>Vamos a mais um exemplo para assimilarmos.</p>
 <p><strong>Exemplo 10</strong>:</p>
 <p>As ações de uma empresa fecharam em queda no dia 29/06/2023, sendo que um banco de investimentos previu que para o próximo dia a probabilidade de ter uma nova queda é de 10%. Porém, no final do dia o dólar teve uma alta, e baseado em experiências anteriores, a probabilidade de uma queda na ação quando há uma alta do dólar é de 25%. Já nos dias que o preço da ação subiu, apenas 3% das vezes foi em alta do dólar. Como podemos atualizar a probabilidade de queda para o dia seguinte?</p>
 <p>Chamaremos de $Q$ o evento de queda da ação. $A$ será a alta do dólar.</p>
-<p>Bom, primeiro devemos enteder as nossas variáveis</p>
+<p>Bom, primeiro devemos entender as nossas variáveis</p>
 <ul>
 <li>$P(Q) = 0,10$ = 10% de probabilidade de queda prevista para o dia seguinte</li>
 <li>$P(Q^{c}) = 0,9$ = 90% de probabilidade de aumento previsto para o dia seguinte</li>
 <li>$P(A|Q) = 0.25$ = 25% de queda quando tem alta do dólar</li>
 <li>$P(A|Q^{c}) = 0.03$ = 3% de aumento quando tem alta do dólar</li>
 </ul>
-<p>$P(Q|A) = \frac{P(Q)\cdot P(A|Q)}{P(Q)\cdot P(A|Q) + P(Q^{c})\cdot P(A|Q^{c})} = \frac{0,10 \cdot 0,25}{(0,10 \cdot 0,25) + (0,9 \cdot 0,03)} = 0,48 = 48\%$</p>
-<p>Com a nova informação aumenta a probabilidade de queda da ação da empresa de 10% para 48%.</p>
+$$P(Q|A) = \frac{P(Q)\cdot P(A|Q)}{P(Q)\cdot P(A|Q) + P(Q^{c})\cdot P(A|Q^{c})} = \frac{0,10 \cdot 0,25}{(0,10 \cdot 0,25) + (0,9 \cdot 0,03)} = 0,48 = 48\%$$<p>Com a nova informação aumenta a probabilidade de queda da ação da empresa de 10% para 48%.</p>
 <p>Porém, foi noticiado que um determinado fundo irá investir alguns milhões na empresa.</p>
-<p>Sabe-se que quando foi noticiada que houve um aumento do dólar e investimento na empresa, as ações cairam 10% das vezes, enquanto, sabe-se que quando foi noticiada que houve aumento do dólar e investimento na empresa as ações subiram 70% da vezes. Chamaremos o evento de investimento de $I$</p>
+<p>Sabe-se que quando foi noticiada que houve um aumento do dólar e investimento na empresa, as ações caíram 10% das vezes, enquanto, sabe-se que quando foi noticiada que houve aumento do dólar e investimento na empresa as ações subiram 70% da vezes. Chamaremos o evento de investimento de $I$</p>
 <p>Temos agora:</p>
 <ul>
 <li>$P(I|Q, A) = 0,10$ = 10% de probabilidade de queda prevista para o dia seguinte.</li>
 <li>$P(I|Q^{c}, A) = 0,7$ = 70% de probabilidade de aumento previsto para o dia seguinte</li>
 </ul>
-<p>$P(Q|A) = \frac{P(Q|A)\cdot P(I|Q, A)}{P(Q|A)\cdot P(I|Q, A) + P(I|Q^{c})\cdot P(I|Q^{c}, A)} = \frac{0,48 \cdot 0,10}{(0,48 \cdot 0,10) + (0,52 \cdot 0,70)} = 0,11 = 11\%$</p>
-<p>Agora temos a probabilidade de queda no dia seguinte de 11%. O teorema de Bayes nos permite fazer as atualizações nas probabilidades ao longo de novas informações dos dados.</p>
+$$P(Q|A) = \frac{P(Q|A)\cdot P(I|Q, A)}{P(Q|A)\cdot P(I|Q, A) + P(I|Q^{c})\cdot P(I|Q^{c}, A)} = \frac{0,48 \cdot 0,10}{(0,48 \cdot 0,10) + (0,52 \cdot 0,70)} = 0,11 = 11\%$$<p>Agora temos a probabilidade de queda no dia seguinte de 11%. O teorema de Bayes nos permite fazer as atualizações nas probabilidades ao longo de novas informações dos dados.</p>
 
 </div>
 </div>
