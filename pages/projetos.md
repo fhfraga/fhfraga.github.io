@@ -4,7 +4,7 @@ title: Projetos
 ---
 ## Machine Learning
 
-* [Recomendador de Vídeos](https://classificadorvideosyoutube.onrender.com/): Um modelo que devolve uma lista de vídeos sobre ciência de dados, classificando a probabilidade de o vídeo agradar o usuário. Também preve a probabilidade de um vídeo qualquer agradar o usuário baseado em seu treinamento. [Link para o projeto no GitHub](https://github.com/fhfraga/classificador_video_youtube)
+* [Recomendador de Vídeos](https://github.com/fhfraga/classificador_video_youtube): Um modelo que devolve uma lista de vídeos sobre ciência de dados, classificando a probabilidade de o vídeo agradar o usuário. Também preve a probabilidade de um vídeo qualquer agradar o usuário baseado em seu treinamento. 
 
 * [Previsão de Vendas em Séries Temporais](https://github.com/fhfraga/rossmann_sales): Neste projeto testamos diversos algoritmos de regressão para a previsão de vendas nas próximas 6 semanas em um rede de lojas.
 
