@@ -7,3 +7,4 @@ title: Estatística
 3. [<u>Probabilidade</u>](3_probabilidade.html)
 4. [<u>Variáveis aleatórias discretas</u>](4_variaveis_aleatorias_discretas.html)
 5. [<u>Variáveis aleatórias contínuas</u>](5_variaveis_aleatorias_continuas.html)
+6. [<u>Variáveis aleatórias multidimensionais</u>](6_variaveis_aleatorias_multidimensionais.html)
