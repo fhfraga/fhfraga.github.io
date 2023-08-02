@@ -9,3 +9,4 @@ title: Estatística
 5. [<u>Variáveis aleatórias contínuas</u>](5_variaveis_aleatorias_continuas.html)
 6. [<u>Variáveis aleatórias multidimensionais</u>](6_variaveis_aleatorias_multidimensionais.html)
 7. [<u>Introdução à inferência estatística</u>](7_introducao_inferencia_estatistica.html)
+8. [<u>Estimação</u>](8_estimacao.html)
