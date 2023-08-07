@@ -10,3 +10,4 @@ title: Estatística
 6. [<u>Variáveis aleatórias multidimensionais</u>](6_variaveis_aleatorias_multidimensionais.html)
 7. [<u>Introdução à inferência estatística</u>](7_introducao_inferencia_estatistica.html)
 8. [<u>Estimação</u>](8_estimacao.html)
+9. [<u>Teste de hipótese</u>](9_teste_hipoteses.html)
