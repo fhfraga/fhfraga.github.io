@@ -28,7 +28,7 @@ navbar-links:
   Conceitos: "pages/conceitos"
   # Estudos: "pages/studies"
   Currículo: "pages/curriculo"
-  Projetos: "pages/projetos"
+  # Projetos: "pages/projetos"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
