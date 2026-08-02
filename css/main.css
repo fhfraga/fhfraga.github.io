@@ -693,5 +693,5 @@ td.gutter {
 .about-text p {
     text-align: justify;
     line-height: 1.9;
-    margin-bottom: 0.0em;
+    margin-bottom: -1.0em;
 }
