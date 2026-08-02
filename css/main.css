@@ -684,3 +684,14 @@ td.gutter {
 #social-share-section {
   margin-bottom: 30px;
 }
+
+.about-text {
+    text-align: justify;
+    line-height: 1.9;
+}
+
+.about-text p {
+    text-align: justify;
+    line-height: 1.9;
+    margin-bottom: 0.5em;
+}
